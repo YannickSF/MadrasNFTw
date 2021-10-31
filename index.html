@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Madras NFT</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    </head>
+    <body>
+        <nav class="navbar is-warning is-fixed-top" role="navigation" aria-label="main navigation">          
+            <div class="navbar-brand">
+                <a class="navbar-item" href="file:///Users/symba/Desktop/Hub/MadrasNFTw/index.html">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                </a>
+            </div>
+            <div id="madrasnav" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="#madras" class="navbar-item"> Madras NFT </a>
+                    <a href="#collection" class="navbar-item"> Hall Of Fame </a>
+                    <a href="#informations" class="navbar-item"> Informations </a>
+                </div>
+            </div>
+        </nav>
+        <br/>
+        <div class="container" id="app">
+            <section id="madras" class="section">
+                <h1 class="title">Le Madras NFT ?</h1>
+                <h2 class="subtitle">
+                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+                </h2>
+                <p>
+                    Donec eu sollicitudin erat. Mauris interdum arcu vel mauris iaculis, id iaculis felis tincidunt.
+                    Proin in nisl vulputate, porta ex a, elementum ex. Vestibulum mollis est nisl, sed tempus velit porta quis. 
+                    Vestibulum vehicula, dui non dapibus accumsan, lacus lectus blandit ex, eu rhoncus ante lorem id mi. 
+                    Mauris ac nisi eu velit porttitor hendrerit eget a velit. Nulla facilisi. Phasellus scelerisque blandit neque at ultricies. 
+                    Cras non velit velit. Pellentesque ullamcorper, elit consectetur suscipit eleifend, est enim varius ex, ut sodales nulla massa ut purus. 
+                    Nam vel libero sed lorem malesuada dignissim. 
+                </p>
+            </section>
+
+            <section id="collection" class="section">
+                <h1 class="title">Madras NFT : Collection #1</h1>
+                <h2 class="subtitle">
+                    Voici la collection #1, onec id velit eu velit tempor condimentum. Aenean porta elit quis nulla facilisis auctor. Curabitur pharetra 
+                    ullamcorper porta. Donec molestie ex eu sodales consequat. Duis hendrerit pharetra nisi sed rutrum.
+                </h2>
+                <br/>
+                <div class="columns is-multiline">
+                    <div v-for="elem in favoris" class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img :src="elem.png" alt="Placeholder image">
+                            </figure>
+                            </div>
+                            <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                <p class="title is-4">{{ elem.username }}</p>
+                                <p class="subtitle is-6">{{ elem.name }}</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>Rarity : {{ elem.extracted.rarity }}</li>
+                                    <li>Extracted : </li>
+                                        <ul>
+                                            <li v-for="key in Object.entries(elem.extracted.created)"> {{ key }}</li>
+                                        </ul>
+                                </ul>
+                            </div>
+                            <footer class="card-footer">
+                                <button type="submit" v-on:click="elem.votes += 1" class="button card-footer-item">Votes : {{ elem.votes }} - Upvote</button>
+                                <a :href="elem.url" type="submit" class="button card-footer-item">Buy</a>
+                            </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="informations" class="footer">
+                <div class="content has-text-centered">
+                    <p>
+                        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+                        <br/>
+                        The website content is licensed is All Right Reserved.
+                        <br/>
+                        <strong>MadrasNFT</strong> powered by <a href="https://yannicksf.xyz">Yannick S. F</a> 
+                    </p>
+                </div>
+            </footer>
+        </div>    
+    </body>
+
+    <script>
+        var gen = new Vue({
+            el: '#app',
+
+            data: {
+                hall_of_fame: {
+                    "1": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 2334,
+                                "blue.2": 15,
+                                "green.0": 49491,
+                                "orange.0": 40836,
+                                "purple.0": 314,
+                                "red.1": 14125,
+                                "red.2": 792,
+                                "yellow.0": 247000,
+                                "yellow.1": 51583,
+                                "yellow.2": 3110
+                            },
+                            "height": 640,
+                            "name": "madrasnft_1",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "559fe63a-c7c1-4eda-9982-9265720d4427",
+                        "name": "madrasnft_1",
+                        "png": "static/madrasnft_1.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "10": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 3279,
+                                "blue.2": 39,
+                                "green.0": 29407,
+                                "orange.0": 43034,
+                                "purple.0": 144,
+                                "red.1": 9597,
+                                "red.2": 900,
+                                "yellow.0": 280675,
+                                "yellow.1": 40836,
+                                "yellow.2": 1689
+                            },
+                            "height": 640,
+                            "name": "madrasnft_10",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "5e886075-2f36-453d-bdee-6dc6163fa520",
+                        "name": "madrasnft_10",
+                        "png": "static/madrasnft_10.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "11": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 8393,
+                                "blue.2": 495,
+                                "green.0": 56663,
+                                "orange.0": 5578,
+                                "purple.0": 66,
+                                "red.1": 470,
+                                "yellow.0": 264171,
+                                "yellow.1": 69575,
+                                "yellow.2": 4189
+                            },
+                            "height": 640,
+                            "name": "madrasnft_11",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "8fab7352-d147-4a83-ab56-402541842835",
+                        "name": "madrasnft_11",
+                        "png": "static/madrasnft_11.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "12": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 3807,
+                                "blue.2": 90,
+                                "green.0": 30327,
+                                "orange.0": 64425,
+                                "purple.0": 74,
+                                "red.1": 5979,
+                                "red.2": 188,
+                                "yellow.0": 272483,
+                                "yellow.1": 30904,
+                                "yellow.2": 1323
+                            },
+                            "height": 640,
+                            "name": "madrasnft_12",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "a30edf51-4d8e-4669-8d5d-f604109f358b",
+                        "name": "madrasnft_12",
+                        "png": "static/madrasnft_12.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "13": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 2358,
+                                "green.0": 52180,
+                                "orange.0": 23877,
+                                "purple.0": 581,
+                                "red.1": 7638,
+                                "red.2": 244,
+                                "yellow.0": 296478,
+                                "yellow.1": 26036,
+                                "yellow.2": 208
+                            },
+                            "height": 640,
+                            "name": "madrasnft_13",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "6a437a0f-bc19-4e33-a6e3-b2d5f19eb4c3",
+                        "name": "madrasnft_13",
+                        "png": "static/madrasnft_13.png",
+                        "status": "draft",
+                        "username": "",
+                        "votes": 0
+                    },
+                    "14": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 327,
+                                "green.0": 20648,
+                                "orange.0": 21238,
+                                "red.1": 889,
+                                "yellow.0": 247680,
+                                "yellow.1": 97951,
+                                "yellow.2": 20867
+                            },
+                            "height": 640,
+                            "name": "madrasnft_14",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "ead357e6-3ef0-4717-87b5-d4afe2dc792e",
+                        "name": "madrasnft_14",
+                        "png": "static/madrasnft_14.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "15": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 2046,
+                                "blue.2": 11,
+                                "green.0": 17678,
+                                "orange.0": 72298,
+                                "purple.0": 811,
+                                "red.1": 8186,
+                                "red.2": 445,
+                                "yellow.0": 291900,
+                                "yellow.1": 16043,
+                                "yellow.2": 182
+                            },
+                            "height": 640,
+                            "name": "madrasnft_15",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "2151b160-c07c-4be9-b340-7df9893fbcdf",
+                        "name": "madrasnft_15",
+                        "png": "static/madrasnft_15.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "16": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 3143,
+                                "blue.2": 111,
+                                "green.0": 51338,
+                                "orange.0": 16251,
+                                "purple.0": 378,
+                                "red.1": 9452,
+                                "red.2": 68,
+                                "yellow.0": 258020,
+                                "yellow.1": 67353,
+                                "yellow.2": 3486
+                            },
+                            "height": 640,
+                            "name": "madrasnft_16",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "5d2336c6-1551-4f07-9704-02826eb8ec92",
+                        "name": "madrasnft_16",
+                        "png": "static/madrasnft_16.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "17": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 574,
+                                "green.0": 29502,
+                                "orange.0": 10853,
+                                "red.1": 630,
+                                "yellow.0": 287820,
+                                "yellow.1": 64423,
+                                "yellow.2": 15798
+                            },
+                            "height": 640,
+                            "name": "madrasnft_17",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "0ca97f19-b4b5-4210-b525-78c481bb9028",
+                        "name": "madrasnft_17",
+                        "png": "static/madrasnft_17.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "2": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 4851,
+                                "blue.2": 108,
+                                "green.0": 49243,
+                                "orange.0": 3856,
+                                "purple.0": 10383,
+                                "red.1": 9456,
+                                "red.2": 597,
+                                "yellow.0": 278703,
+                                "yellow.1": 50675,
+                                "yellow.2": 1728
+                            },
+                            "height": 640,
+                            "name": "madrasnft_2",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "9489eb85-79e6-4ff3-96e0-27b2640aaece",
+                        "name": "madrasnft_2",
+                        "png": "static/madrasnft_2.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "3": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 7373,
+                                "blue.2": 47,
+                                "green.0": 13747,
+                                "orange.0": 45976,
+                                "purple.0": 609,
+                                "red.1": 1733,
+                                "yellow.0": 297000,
+                                "yellow.1": 41278,
+                                "yellow.2": 1837
+                            },
+                            "height": 640,
+                            "name": "madrasnft_3",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "c202d788-9c1c-477e-8813-bcb4da5d36de",
+                        "name": "madrasnft_3",
+                        "png": "static/madrasnft_3.png",
+                        "status": "draft",
+                        "username": "",
+                        "votes": 0
+                    },
+                    "4": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 7081,
+                                "blue.2": 260,
+                                "green.0": 26157,
+                                "orange.0": 17170,
+                                "purple.0": 239,
+                                "red.1": 1272,
+                                "yellow.0": 258598,
+                                "yellow.1": 92129,
+                                "yellow.2": 6694
+                            },
+                            "height": 640,
+                            "name": "madrasnft_4",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "075091bc-91e1-48c9-bb36-9a0089ab835c",
+                        "name": "madrasnft_4",
+                        "png": "static/madrasnft_4.png",
+                        "status": "draft",
+                        "username": "",
+                        "votes": 0
+                    },
+                    "5": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 1278,
+                                "blue.2": 8,
+                                "green.0": 30070,
+                                "orange.0": 55334,
+                                "purple.0": 65,
+                                "red.1": 5794,
+                                "yellow.0": 258482,
+                                "yellow.1": 55886,
+                                "yellow.2": 2683
+                            },
+                            "height": 640,
+                            "name": "madrasnft_5",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "0d7c7652-37ad-4da3-8bf6-e3bc0298f513",
+                        "name": "madrasnft_5",
+                        "png": "static/madrasnft_5.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "6": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 3007,
+                                "green.0": 41061,
+                                "orange.0": 63983,
+                                "purple.0": 812,
+                                "red.1": 20772,
+                                "red.2": 1479,
+                                "yellow.0": 264620,
+                                "yellow.1": 13790,
+                                "yellow.2": 76
+                            },
+                            "height": 640,
+                            "name": "madrasnft_6",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "58d5eb2c-f798-4200-964d-5a60a07afb96",
+                        "name": "madrasnft_6",
+                        "png": "static/madrasnft_6.png",
+                        "status": "draft",
+                        "username": "",
+                        "votes": 0
+                    },
+                    "7": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 2295,
+                                "blue.2": 12,
+                                "green.0": 15368,
+                                "orange.0": 52229,
+                                "purple.0": 169,
+                                "red.1": 3673,
+                                "red.2": 55,
+                                "yellow.0": 266500,
+                                "yellow.1": 62780,
+                                "yellow.2": 6519
+                            },
+                            "height": 640,
+                            "name": "madrasnft_7",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "badf358b-3106-44bb-b508-f0637e785bc5",
+                        "name": "madrasnft_7",
+                        "png": "static/madrasnft_7.png",
+                        "status": "draft",
+                        "username": "",
+                        "votes": 0
+                    },
+                    "8": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 1860,
+                                "blue.2": 33,
+                                "green.0": 31766,
+                                "orange.0": 33949,
+                                "purple.0": 394,
+                                "red.1": 8220,
+                                "red.2": 468,
+                                "yellow.0": 303975,
+                                "yellow.1": 27920,
+                                "yellow.2": 1015
+                            },
+                            "height": 640,
+                            "name": "madrasnft_8",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "90aec42b-3f75-4893-9911-3ef4004bfcec",
+                        "name": "madrasnft_8",
+                        "png": "static/madrasnft_8.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    },
+                    "9": {
+                        "creation_date": "31-10-21",
+                        "extracted": {
+                            "background": "yellow",
+                            "created": {
+                                "blue.1": 2253,
+                                "blue.2": 5,
+                                "green.0": 29839,
+                                "orange.0": 46922,
+                                "purple.0": 161,
+                                "red.1": 5034,
+                                "red.2": 132,
+                                "yellow.0": 249964,
+                                "yellow.1": 51682,
+                                "yellow.2": 23608
+                            },
+                            "height": 640,
+                            "name": "madrasnft_9",
+                            "palette": [
+                                "yellow",
+                                "yellow",
+                                "yellow",
+                                "red",
+                                "red",
+                                "blue",
+                                "blue"
+                            ],
+                            "width": 640
+                        },
+                        "id": "617ebfd5-1047-462f-af9c-5c801c8f6cf4",
+                        "name": "madrasnft_9",
+                        "png": "static/madrasnft_9.png",
+                        "status": "pin",
+                        "username": "Yannick S. F ",
+                        "votes": 0
+                    }
+                }
+            },
+            computed: {
+
+                favoris: function (){
+                    return this.hall_of_fame;
+                },
+            }
+        });
+    </script>
+</html>
