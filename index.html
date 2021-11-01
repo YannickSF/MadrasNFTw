@@ -3,47 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <title>Madras NFT</title>
+        <link rel="icon" type="image/png" href="asset/favicon.ico"/>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     </head>
     <body>
-        <nav class="navbar is-warning is-fixed-top" role="navigation" aria-label="main navigation">          
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">          
             <div class="navbar-brand">
-                <a class="navbar-item" href="file:///Users/symba/Desktop/Hub/MadrasNFTw/index.html">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <a class="navbar-item" href="madras.yannicksf.xyz">
+                    <img src="asset/madrasnft_7.png" width="116" >
                 </a>
             </div>
-            <div id="madrasnav" class="navbar-menu">
+            <div class="navbar-menu">
                 <div class="navbar-start">
                     <a href="#madras" class="navbar-item"> Madras NFT </a>
-                    <a href="#collection" class="navbar-item"> Hall Of Fame </a>
-                    <a href="#informations" class="navbar-item"> Informations </a>
+                    <a href="#collection" class="navbar-item"> Collection </a>
+                    <a href="#more" class="navbar-item"> Le Futur </a>
+                    <a href="#informations" class="navbar-item"> Infos </a>
                 </div>
             </div>
         </nav>
         <br/>
+
         <div class="container" id="app">
-            <section id="madras" class="section">
-                <h1 class="title">Le Madras NFT ?</h1>
-                <h2 class="subtitle">
-                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
-                </h2>
-                <p>
-                    Donec eu sollicitudin erat. Mauris interdum arcu vel mauris iaculis, id iaculis felis tincidunt.
-                    Proin in nisl vulputate, porta ex a, elementum ex. Vestibulum mollis est nisl, sed tempus velit porta quis. 
-                    Vestibulum vehicula, dui non dapibus accumsan, lacus lectus blandit ex, eu rhoncus ante lorem id mi. 
-                    Mauris ac nisi eu velit porttitor hendrerit eget a velit. Nulla facilisi. Phasellus scelerisque blandit neque at ultricies. 
-                    Cras non velit velit. Pellentesque ullamcorper, elit consectetur suscipit eleifend, est enim varius ex, ut sodales nulla massa ut purus. 
-                    Nam vel libero sed lorem malesuada dignissim. 
-                </p>
+
+            <section id="madras" class="hero is-large" style="background-color: #FFB800;">
+                <div class="hero-body">
+                    <h1 class="title">Le Madras NFT ?</h1>
+                    <h2 class="subtitle">
+                        C'est l'idée de laisser un programme générer des motifs de tissues de Madras. 
+                    </h2>
+                    <p>
+                        Donec eu sollicitudin erat. Mauris interdum arcu vel mauris iaculis, id iaculis felis tincidunt.
+                        Proin in nisl vulputate, porta ex a, elementum ex. Vestibulum mollis est nisl, sed tempus velit porta quis. 
+                        Vestibulum vehicula, dui non dapibus accumsan, lacus lectus blandit ex, eu rhoncus ante lorem id mi. 
+                        Mauris ac nisi eu velit porttitor hendrerit eget a velit. Nulla facilisi. Phasellus scelerisque blandit neque at ultricies. 
+                        Cras non velit velit. Pellentesque ullamcorper, elit consectetur suscipit eleifend, est enim varius ex, ut sodales nulla massa ut purus. 
+                        Nam vel libero sed lorem malesuada dignissim. 
+                    </p>
+                </div>
             </section>
 
-            <section id="collection" class="section">
+            <section id="collection" class="section" style="background-color: #F1F7ED;">
                 <h1 class="title">Madras NFT : Collection #1</h1>
                 <h2 class="subtitle">
-                    Voici la collection #1, onec id velit eu velit tempor condimentum. Aenean porta elit quis nulla facilisis auctor. Curabitur pharetra 
-                    ullamcorper porta. Donec molestie ex eu sodales consequat. Duis hendrerit pharetra nisi sed rutrum.
+                    Voici la première collection du Madras NFT, on peut l'appeler <strong>"La Collection Originale"</strong>
+                    <a href="#more"><strike>Parce qu'il n'y en aura plus des commes ceux-ci.</strike></a><br/>
+                    <strong>101 lots uniques</strong> <br/>
+                    Dîtes nous, quelles sont vos préférées ?! 
                 </h2>
                 <br/>
                 <div class="columns is-multiline">
@@ -58,7 +66,7 @@
                             <div class="media">
                                 <div class="media-content">
                                 <p class="title is-4">{{ elem.username }}</p>
-                                <p class="subtitle is-6">{{ elem.name }}</p>
+                                <p class="subtitle is-5">Name : {{ elem.name }}</p>
                                 </div>
                             </div>
                             <div class="content">
@@ -75,6 +83,21 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="more" class="section" style="background-color: #FFB800;">
+                <h1 class="title">Le Futur ?</h1>
+                <h2 class="subtitle">
+                    C'est l'idée de laisser un programme générer des motifs de tissues de Madras. 
+                </h2>
+                <p>
+                    Donec eu sollicitudin erat. Mauris interdum arcu vel mauris iaculis, id iaculis felis tincidunt.
+                    Proin in nisl vulputate, porta ex a, elementum ex. Vestibulum mollis est nisl, sed tempus velit porta quis. 
+                    Vestibulum vehicula, dui non dapibus accumsan, lacus lectus blandit ex, eu rhoncus ante lorem id mi. 
+                    Mauris ac nisi eu velit porttitor hendrerit eget a velit. Nulla facilisi. Phasellus scelerisque blandit neque at ultricies. 
+                    Cras non velit velit. Pellentesque ullamcorper, elit consectetur suscipit eleifend, est enim varius ex, ut sodales nulla massa ut purus. 
+                    Nam vel libero sed lorem malesuada dignissim. 
+                </p>
             </section>
 
             <footer id="informations" class="footer">
@@ -134,7 +157,7 @@
             "png": "static/madrasnft_1.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "10": {
@@ -174,7 +197,7 @@
             "png": "static/madrasnft_10.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "100": {
@@ -214,7 +237,7 @@
             "png": "static/madrasnft_100.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "101": {
@@ -254,7 +277,7 @@
             "png": "static/madrasnft_101.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "11": {
@@ -294,7 +317,7 @@
             "png": "static/madrasnft_11.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "12": {
@@ -334,7 +357,7 @@
             "png": "static/madrasnft_12.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "13": {
@@ -374,7 +397,7 @@
             "png": "static/madrasnft_13.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "14": {
@@ -413,7 +436,7 @@
             "png": "static/madrasnft_14.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "15": {
@@ -453,7 +476,7 @@
             "png": "static/madrasnft_15.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "16": {
@@ -493,7 +516,7 @@
             "png": "static/madrasnft_16.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "17": {
@@ -533,7 +556,7 @@
             "png": "static/madrasnft_17.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "18": {
@@ -573,7 +596,7 @@
             "png": "static/madrasnft_18.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "19": {
@@ -613,7 +636,7 @@
             "png": "static/madrasnft_19.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "2": {
@@ -653,7 +676,7 @@
             "png": "static/madrasnft_2.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "20": {
@@ -693,7 +716,7 @@
             "png": "static/madrasnft_20.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "21": {
@@ -732,7 +755,7 @@
             "png": "static/madrasnft_21.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "22": {
@@ -772,7 +795,7 @@
             "png": "static/madrasnft_22.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "23": {
@@ -811,7 +834,7 @@
             "png": "static/madrasnft_23.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "24": {
@@ -850,7 +873,7 @@
             "png": "static/madrasnft_24.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "25": {
@@ -887,7 +910,7 @@
             "png": "static/madrasnft_25.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "26": {
@@ -926,7 +949,7 @@
             "png": "static/madrasnft_26.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "27": {
@@ -965,7 +988,7 @@
             "png": "static/madrasnft_27.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "28": {
@@ -1004,7 +1027,7 @@
             "png": "static/madrasnft_28.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "29": {
@@ -1043,7 +1066,7 @@
             "png": "static/madrasnft_29.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "3": {
@@ -1083,7 +1106,7 @@
             "png": "static/madrasnft_3.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "30": {
@@ -1122,7 +1145,7 @@
             "png": "static/madrasnft_30.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "31": {
@@ -1161,7 +1184,7 @@
             "png": "static/madrasnft_31.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "32": {
@@ -1200,7 +1223,7 @@
             "png": "static/madrasnft_32.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "33": {
@@ -1237,7 +1260,7 @@
             "png": "static/madrasnft_33.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "34": {
@@ -1276,7 +1299,7 @@
             "png": "static/madrasnft_34.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "35": {
@@ -1315,7 +1338,7 @@
             "png": "static/madrasnft_35.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "36": {
@@ -1354,7 +1377,7 @@
             "png": "static/madrasnft_36.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "37": {
@@ -1391,7 +1414,7 @@
             "png": "static/madrasnft_37.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "38": {
@@ -1431,7 +1454,7 @@
             "png": "static/madrasnft_38.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "39": {
@@ -1470,7 +1493,7 @@
             "png": "static/madrasnft_39.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "4": {
@@ -1510,7 +1533,7 @@
             "png": "static/madrasnft_4.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "40": {
@@ -1547,7 +1570,7 @@
             "png": "static/madrasnft_40.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "41": {
@@ -1586,7 +1609,7 @@
             "png": "static/madrasnft_41.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "42": {
@@ -1626,7 +1649,7 @@
             "png": "static/madrasnft_42.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "43": {
@@ -1666,7 +1689,7 @@
             "png": "static/madrasnft_43.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "44": {
@@ -1706,7 +1729,7 @@
             "png": "static/madrasnft_44.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "45": {
@@ -1745,7 +1768,7 @@
             "png": "static/madrasnft_45.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "46": {
@@ -1784,7 +1807,7 @@
             "png": "static/madrasnft_46.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "47": {
@@ -1824,7 +1847,7 @@
             "png": "static/madrasnft_47.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "48": {
@@ -1863,7 +1886,7 @@
             "png": "static/madrasnft_48.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "49": {
@@ -1902,7 +1925,7 @@
             "png": "static/madrasnft_49.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "5": {
@@ -1942,7 +1965,7 @@
             "png": "static/madrasnft_5.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "50": {
@@ -1982,7 +2005,7 @@
             "png": "static/madrasnft_50.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "51": {
@@ -2022,7 +2045,7 @@
             "png": "static/madrasnft_51.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "52": {
@@ -2061,7 +2084,7 @@
             "png": "static/madrasnft_52.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "53": {
@@ -2100,7 +2123,7 @@
             "png": "static/madrasnft_53.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "54": {
@@ -2140,7 +2163,7 @@
             "png": "static/madrasnft_54.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "55": {
@@ -2180,7 +2203,7 @@
             "png": "static/madrasnft_55.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "56": {
@@ -2220,7 +2243,7 @@
             "png": "static/madrasnft_56.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "57": {
@@ -2260,7 +2283,7 @@
             "png": "static/madrasnft_57.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "58": {
@@ -2300,7 +2323,7 @@
             "png": "static/madrasnft_58.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "59": {
@@ -2340,7 +2363,7 @@
             "png": "static/madrasnft_59.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "6": {
@@ -2380,7 +2403,7 @@
             "png": "static/madrasnft_6.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "60": {
@@ -2420,7 +2443,7 @@
             "png": "static/madrasnft_60.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "61": {
@@ -2460,7 +2483,7 @@
             "png": "static/madrasnft_61.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "62": {
@@ -2499,7 +2522,7 @@
             "png": "static/madrasnft_62.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "63": {
@@ -2538,7 +2561,7 @@
             "png": "static/madrasnft_63.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "64": {
@@ -2577,7 +2600,7 @@
             "png": "static/madrasnft_64.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "65": {
@@ -2616,7 +2639,7 @@
             "png": "static/madrasnft_65.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "66": {
@@ -2654,7 +2677,7 @@
             "png": "static/madrasnft_66.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "67": {
@@ -2694,7 +2717,7 @@
             "png": "static/madrasnft_67.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "68": {
@@ -2734,7 +2757,7 @@
             "png": "static/madrasnft_68.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "69": {
@@ -2774,7 +2797,7 @@
             "png": "static/madrasnft_69.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "7": {
@@ -2814,7 +2837,7 @@
             "png": "static/madrasnft_7.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "70": {
@@ -2854,7 +2877,7 @@
             "png": "static/madrasnft_70.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "71": {
@@ -2892,7 +2915,7 @@
             "png": "static/madrasnft_71.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "72": {
@@ -2932,7 +2955,7 @@
             "png": "static/madrasnft_72.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "73": {
@@ -2972,7 +2995,7 @@
             "png": "static/madrasnft_73.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "74": {
@@ -3011,7 +3034,7 @@
             "png": "static/madrasnft_74.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "75": {
@@ -3051,7 +3074,7 @@
             "png": "static/madrasnft_75.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "76": {
@@ -3091,7 +3114,7 @@
             "png": "static/madrasnft_76.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "77": {
@@ -3130,7 +3153,7 @@
             "png": "static/madrasnft_77.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "78": {
@@ -3170,7 +3193,7 @@
             "png": "static/madrasnft_78.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "79": {
@@ -3210,7 +3233,7 @@
             "png": "static/madrasnft_79.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "8": {
@@ -3250,7 +3273,7 @@
             "png": "static/madrasnft_8.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "80": {
@@ -3290,7 +3313,7 @@
             "png": "static/madrasnft_80.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "81": {
@@ -3330,7 +3353,7 @@
             "png": "static/madrasnft_81.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "82": {
@@ -3370,7 +3393,7 @@
             "png": "static/madrasnft_82.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "83": {
@@ -3410,7 +3433,7 @@
             "png": "static/madrasnft_83.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "84": {
@@ -3450,7 +3473,7 @@
             "png": "static/madrasnft_84.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "85": {
@@ -3490,7 +3513,7 @@
             "png": "static/madrasnft_85.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "86": {
@@ -3530,7 +3553,7 @@
             "png": "static/madrasnft_86.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "87": {
@@ -3570,7 +3593,7 @@
             "png": "static/madrasnft_87.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "88": {
@@ -3610,7 +3633,7 @@
             "png": "static/madrasnft_88.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "89": {
@@ -3650,7 +3673,7 @@
             "png": "static/madrasnft_89.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "9": {
@@ -3690,7 +3713,7 @@
             "png": "static/madrasnft_9.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "90": {
@@ -3730,7 +3753,7 @@
             "png": "static/madrasnft_90.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "91": {
@@ -3770,7 +3793,7 @@
             "png": "static/madrasnft_91.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "92": {
@@ -3810,7 +3833,7 @@
             "png": "static/madrasnft_92.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "93": {
@@ -3850,7 +3873,7 @@
             "png": "static/madrasnft_93.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "94": {
@@ -3890,7 +3913,7 @@
             "png": "static/madrasnft_94.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "95": {
@@ -3930,7 +3953,7 @@
             "png": "static/madrasnft_95.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "96": {
@@ -3970,7 +3993,7 @@
             "png": "static/madrasnft_96.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "97": {
@@ -4010,7 +4033,7 @@
             "png": "static/madrasnft_97.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "98": {
@@ -4050,7 +4073,7 @@
             "png": "static/madrasnft_98.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         },
         "99": {
@@ -4090,7 +4113,7 @@
             "png": "static/madrasnft_99.png",
             
             "url": "",
-            "username": "",
+            "username": "Yannick S. F",
             "votes": 0
         }
 }

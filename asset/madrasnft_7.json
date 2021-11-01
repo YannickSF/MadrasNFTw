@@ -1,0 +1,35 @@
+{
+    "creation_date": "01-11-21",
+    "extracted": {
+        "background": "red",
+        "created": {
+            "blue.1": 925,
+            "blue.2": 30,
+            "green.0": 1284,
+            "orange.0": 2440,
+            "purple.0": 572,
+            "red.0": 1824,
+            "red.1": 2083,
+            "red.2": 690,
+            "yellow.1": 1695,
+            "yellow.2": 1001
+        },
+        "height": 112,
+        "name": "madrasnft_7",
+        "palette": [
+            "yellow",
+            "blue",
+            "blue",
+            "red",
+            "red"
+        ],
+        "width": 112
+    },
+    "id": "cf11ab70-0fcc-40e9-9260-ae71b13d834b",
+    "name": "madrasnft_7",
+    "png": "madrasnft_7.png",
+    "status": "pin",
+    "url": "",
+    "username": "Yannick S. F",
+    "votes": 0
+}
